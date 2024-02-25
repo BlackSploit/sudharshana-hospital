@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="19.297001"
+   height="11"
+   viewBox="0 0 19.297001 10.999999"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="arrow_light.svg"
+   inkscape:version="1.1-beta1 (77e7b44db3, 2021-03-28)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     objecttolerance="10.0"
+     gridtolerance="10.0"
+     guidetolerance="10.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="26.947193"
+     inkscape:cx="10.798899"
+     inkscape:cy="6.0674224"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <g
+     id="arrow-down-sign-to-navigate"
+     transform="translate(0.0405807,-97.069082)"
+     style="fill:#ffffff;fill-opacity:1">
+    <path
+       id="Path_9329"
+       data-name="Path 9329"
+       d="m 9.649,108.14 a 1.347,1.347 0 0 1 -0.955,-0.4 l -8.3,-8.3 a 1.3512811,1.3512811 0 0 1 1.911,-1.911 l 7.342,7.342 7.342,-7.342 a 1.3541124,1.3541124 0 0 1 1.911,1.919 l -8.3,8.3 a 1.347,1.347 0 0 1 -0.951,0.392 z"
+       fill="#fff"
+       style="fill:#ffffff;fill-opacity:1" />
+  </g>
+</svg>

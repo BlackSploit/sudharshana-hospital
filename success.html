@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Success</title>
+    <style>
+        body {
+            background-color: #FFFFFF; /* White Background */
+            color: #333; /* Dark text for better readability on white */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            flex-direction: column; /* Ensures vertical alignment for all items */
+        }
+        .tick-mark {
+            font-size: 100px;
+            color: #4CAF50; /* Green Tick Mark */
+        }
+        .message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333; /* Dark text color */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="heading">Analyzing Your Submission</h1>
+        <div class="tick-mark">&#10004;</div>
+        <p class="message">We have received your current symptoms that you are suffering from.<br>
+        One Of Our Experts Will Connect With You Shortly!</p>
+    </div>
+    <script>
+        // Redirect to index.html after 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+            window.location.href = "./index.html";
+        }, 4000);
+    </script>
+</body>
+</html>
