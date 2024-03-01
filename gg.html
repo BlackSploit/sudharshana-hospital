@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Table with Images and Text</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .table-container {
+        width: 60%; /* Default width for desktop */
+        margin: 0 auto; /* Center the table */
+        overflow-x: auto; /* Adds scroll on small screens */
+      }
+
+      @media (max-width: 768px) {
+        /* For tablets and below */
+        .table-container {
+          width: 70%; /* Adjust width for tablets and mobile */
+        }
+
+        .round-img {
+          width: 40px; /* Smaller images for smaller screens */
+          height: 40px;
+          margin: 0 auto 10px; /* Adjust spacing */
+        }
+
+        .table-cell {
+          padding: 30px; /* Smaller padding for smaller screens */
+        }
+      }
+
+      .table {
+        border-collapse: collapse; /* Ensures borders collapse into a single border */
+        width: 100%; /* Make the table width responsive to container */
+      }
+
+      .table td:not(:first-child) {
+        border-left: 1px solid #ccc;
+      }
+
+      .table tr:not(:first-child) td {
+        border-top: 1px solid #ccc;
+      }
+
+      .round-img {
+        width: 50px; /* Adjust size as needed */
+        height: 50px; /* Adjust size as needed */
+        border-radius: 50%; /* Makes the image round */
+        object-fit: cover; /* Ensures the image covers the area */
+        display: block;
+        margin: 0 auto 10px; /* Centers the image and adds space below */
+      }
+
+      .table-cell {
+        text-align: center; /* Centers the text and image */
+        vertical-align: middle; /* Aligns content in the middle vertically */
+        padding: 20px; /* Adjust padding to control cell size */
+      }
+
+      .table-cell:hover {
+  background-color: rgba(255, 34, 0, 0.401); /* Light orange background */
+  transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+}
+.table {
+  border-collapse: separate; /* Adjust for box-shadow */
+  border-spacing: 0; /* Remove default spacing */
+  width: 100%;
+}
+
+.table td, .table th {
+  border: 1px round #ddd; /* Lighter color for a subtle look */
+  position: relative; /* Required for shadow */
+}
+
+.table td:not(:first-child), .table th:not(:first-child) {
+  border-left: none; /* Avoid double borders */
+}
+
+.table tr:not(:first-child) td, .table tr:not(:first-child) th {
+  border-top: none; /* Avoid double borders */
+}
+
+.table-cell {
+  box-shadow: 5px 4px 6px rgba(177, 171, 171, 0.451); /* Subtle shadow for depth */
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgb(255, 255, 255); /* Ensure cell background is solid for shadow effect */
+  transition: transform 0.2s ease; /* Smooth transition for interaction */
+}
+
+.table-cell:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0px 6px 9px rgba(0,0,0,0.15); /* Enhanced shadow on hover for a 'lifted' effect */
+}
+
+
+
+
+
+        .owl-carousel .item {
+    text-align: center;
+    padding: 15px;
+}
+.round-img1 {
+    width: 5vw; /* Smaller size */
+    height: 35vw; /* Smaller size */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block;
+    margin: 0 auto 10px; /* Centers the image and adds space below */
+}
+
+/* Arrow customization */
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    color: #333; /* Arrow color */
+    font-size: 24px; /* Arrow size */
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    color: #F00; /* Arrow hover color */
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff; /* Arrow background color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd; /* Arrow border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow for a "lifted" effect */
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -25px; /* Adjust based on your layout */
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -25px; /* Adjust based on your layout */
+}
+
+.owl-carousel .owl-nav button.owl-prev i,
+.owl-carousel .owl-nav button.owl-next i {
+    color: #333; /* Icon color */
+    font-size: 16px; /* Icon size */
+}
+
+.owl-carousel .owl-nav button:hover {
+    background-color: #f2f2f2; /* Background color on hover */
+}
+
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Remove border for a cleaner look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    color: #333; /* Icon color */
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: calc(0% - 20px); /* Adjust to ensure visibility */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: calc(0% - 20px); /* Adjust to match left arrow */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.owl-carousel .owl-nav button i {
+    font-size: 16px; /* Icon size */
+}
+
+.owl-carousel .owl-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque on hover */
+}
+
+
+    </style>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+
+
+
+  </head>
+  <body>
+    <div class="table-container d-none d-md-block">
+      <table class="table">
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 1</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 2</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 3</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 4</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 5</div>
+            </td>
+          </tr>
+          <!-- Additional rows -->
+          <tr>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 1</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 2</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 3</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 4</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 5</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 1</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 2</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 3</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 4</div>
+            </td>
+            <td class="table-cell">
+              <img
+                src="./assets/banner/img/img_1.png"
+                alt="Image"
+                class="round-img"
+              />
+              <div>Text 5</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="owl-carousel d-md-none" style="margin-left: 10px;">
+      <div class="item">
+          <img src="./assets/banner/img/img_1.png" alt="Image" class="round-img1" />
+          <div>Text 1</div>
+      </div>
+      <div class="item">
+          <img src="./assets/banner/img/img_1.png" alt="Image" class="round-img1" />
+          <div>Text 2</div>
+      </div>
+      <div class="item">
+          <img src="./assets/banner/img/img_1.png" alt="Image" class="round-img1" />
+          <div>Text 3</div>
+      </div>
+      <!-- Add more items as needed -->
+  </div>
+  
+  <!-- Bootstrap and jQuery JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <script>
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true, // Enable navigation arrows
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2, // Show at least 2 items
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 4,
+                loop: false
+            }
+        },
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'] // Use FontAwesome icons
+    });
+});
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

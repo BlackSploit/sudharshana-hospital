@@ -1600,7 +1600,7 @@ body::-webkit-scrollbar-thumb:hover {
   box-sizing: border-box;
   width: 100%;
   background-color: rgba(189, 4, 4, 0.538);
-  color: #ffffff;
+  color: #111111;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   -webkit-transition: 400ms;
@@ -1828,7 +1828,7 @@ body::-webkit-scrollbar-thumb:hover {
   box-sizing: border-box;
   width: 100%;
   background-color: rgba(189, 4, 4, 0.538);
-  color: #ffffff;
+  color: #505050;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
   -webkit-transition: 400ms;
@@ -3523,7 +3523,7 @@ body::-webkit-scrollbar-thumb:hover {
   top: 0px;
   left: 0px;
   z-index: 250;
-  background-image: url(../assets/sidebar/bg.png);
+  background-image: url(../assets/home/about/about_bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3593,7 +3593,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-image: url(../assets/sidebar/close.svg);
+  background-image: url(../assets/sidebar/close.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 21px;
@@ -3769,7 +3769,7 @@ body::-webkit-scrollbar-thumb:hover {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #d44414cc;
   font-weight: bold;
   -webkit-transition: 400ms;
   transition: 400ms;
@@ -10274,5 +10274,10 @@ footer .container .right .row .icon.mail {
 }
 }
 #home-banner > div.ctr > div.content-section > div.content{
-  color: rgb(162 161 161);
+  color: rgb(98, 98, 98);
+}
+
+
+#home-appointment > div > div.right.home-appointment-section > div > form > div.content-section > div.l-section > div.double-box > div:nth-child(1) > input{
+  color: white !important;
 }
